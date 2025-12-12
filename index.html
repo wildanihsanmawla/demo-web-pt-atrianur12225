@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRIANUR ENERGI INDONESIA</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="/src/pt-atrianur2.fw-2.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Faculty+Glyphic&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Life+Savers:wght@400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <header id="mainHeader">
+        <div class="header-container">
+            <div class="header-logo">
+                <img width="50" src="/src/pt-atrianur2.fw-2.webp" alt="Logo ATRIANUR">
+                <h1>ATRIANUR ENERGI INDONESIA</h1>
+            </div>
+
+            <div>
+                <nav class="topnav" id="myTopnav">
+                    <a href="/index.html">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#products">Produk</a>
+                    <a href="#contact">Kontak</a>
+                    <a href="/index-en.html" id="langBtn" class="lang-switch">🌐 ID</a>
+                    <a href="javascript:void(0);" class="icon" id="hamburgerBtn">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="hero">
+            <div class="carousel" id="carousel"></div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+
+                <div class="about-wrapper">
+                    <div class="about-intro" role="region" aria-label="Tentang Kami Ringkasan" data-key="about"
+                        tabindex="0">
+                        <h3>Tentang Kami</h3>
+                        <p>ATRIANUR ENERGI INDONESIA bergerak di bidang solusi energi dan teknologi.</p>
+                        <div style="margin-top:12px;">
+                            <button class="action-btn" data-key="about">Selengkapnya</button>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <div class="visi-misi" role="region" aria-label="Visi dan Misi">
+                            <div class="visi" id="visi-card" data-key="visi" role="button" tabindex="0"
+                                aria-label="Visi">
+                                <h3>Visi</h3>
+                                <p>PT Atrianur Energi Indonesia adalah perusahaan swasta nasional ergerak di bidang
+                                    pembelian minyak</p>
+                                <div class="about-actions">
+                                    <button class="action-btn" data-key="visi">Selengkapnya</button>
+                                </div>
+                            </div>
+
+                            <div class="misi" id="misi-card" data-key="misi" role="button" tabindex="0"
+                                aria-label="Misi">
+                                <h3>Misi</h3>
+                                <p>Merangkul seluruh elemen bisnis serta masyarakat ikut serta dalam kegiatan
+                                    pengumpulan limbah</p>
+                                <div class="about-actions">
+                                    <button class="action-btn" data-key="misi">Selengkapnya</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="infoModal" class="modal-overlay" aria-hidden="true">
+                    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+                        <div class="modal-header">
+                            <h3 id="modalTitle">Judul</h3>
+                            <button class="modal-close" id="modalClose" aria-label="Tutup">&times;</button>
+                        </div>
+                        <div id="modalBody" style="margin-top:12px; line-height:1.5;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <h2>Produk Kami</h2>
+                <div class="product-list">
+
+                    <div class="product-item">
+                        <div class="product-image-wrapper">
+                            <img src="/src/rodion-kutsaiev-kE0mU-yy31Y-unsplash.jpg" alt="Produk Minyak">
+                        </div>
+                        <h3>Produk Minyak</h3>
+                        <p>Pengolahan minyak jelantah untuk biodiesel dan industri, lengkap dengan layanan
+                            penjemputan.
+                        </p>
+                        <a href="/page/minyak.html" class="product-btn">Lihat Produk Minyak</a>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image-wrapper">
+                            <img src="/src/penyimpanan-bahan-kimia.webp" alt="Produk Kimia">
+                        </div>
+                        <h3>Produk Kimia</h3>
+                        <p>Penyedia bahan kimia dan solusi penyimpanan aman sesuai standar keselamatan.</p>
+                        <a href="/page/kimia.html" class="product-btn">Lihat Produk Kimia</a>
+                    </div>
+
+                    <!--
+                    <div class="product-item">
+                        <div class="product-image-wrapper">
+                            <img src="/src/cover1-950x450.jpg" alt="Produk Elevator">
+                        </div>
+                        <h3>Produk Elevator</h3>
+                        <p>Lift untuk gedung komersial dan residensial dengan layanan pemasangan dan perawatan.</p>
+                        <a href="/page/lift.html" class="product-btn">Lihat Detail</a>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image-wrapper">
+                            <img src="/src/cover2-950x450.jpg" alt="Produk Gondola">
+                        </div>
+                        <h3>Produk Gondola</h3>
+                        <p>Sistem gondola aman dan stabil untuk pekerjaan gedung tinggi.</p>
+                        <a href="/page/gondola.html" class="product-btn">Lihat Detail</a>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image-wrapper">
+                            <img src="/src/cover3-950x450.jpg" alt="Produk Dumbwaiter">
+                        </div>
+                        <h3>Produk Dumbwaiter</h3>
+                        <p>Lift kecil untuk barang ringan antar lantai, efisien dan mudah dirawat.</p>
+                        <a href="/page/dumbwaiter.html" class="product-btn">Lihat Detail</a>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Kontak Kami</h2>
+                    <br><br>
+                    <div class="contact-col">
+                        <div class="contact-info">
+                            <div class="contact-header">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>PT. ATRIANUR ENERGI INDONESIA</h4>
+                            </div>
+                            <div class="contact-text">
+                                <span>Komplek Perum. Villa Ilhami
+                                    Jl. Alam IV Blok A No. 14
+                                    Kelapa Dua Tangerang - Banten</span>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-header">
+                                <i class="fas fa-envelope"></i>
+                                <h4>EMAIL</h4>
+                            </div>
+                            <div class="contact-text">
+                                <span>sales@atrianur-ei.id</span>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-header">
+                                <i class="fas fa-phone"></i>
+                                <h4>TELEPON & FAX</h4>
+                            </div>
+                            <div class="contact-text">
+                                <span>(021) 5420 2242</span>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-header">
+                                <i class="fas fa-clock"></i>
+                                <h4>JAM KERJA</h4>
+                            </div>
+                            <div class="contact-text">
+                                <span>Monday - Friday 09.00 - 16.30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img width="50px" src="/src/pt-atrianur2.fw-2.webp" alt="logo">
+                    <h2>ATRIANUR ENERGI INDONESIA</h2>
+                </div>
+                <p>Meningkatkan kualitas hidup dengan solusi teknologi lift modern, aman, dan efisien.</p>
+                <p><strong>Alamat :</strong> Komplek Perum. Villa Ilhami
+                    Jl. Alam IV Blok A No. 14
+                    Kelapa Dua Tangerang - Banten</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Tautan Cepat</h2>
+                <ul class="footer-links" style="list-style: none; padding: 0;">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#products">Produk & Layanan</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>Kontak Kami</h2>
+                <ul class="footer-links" style="list-style: none; padding: 0;">
+                    <p><strong>Email :</strong> sales@atrianur-ei.id</p>
+                    <p><strong>Telepon :</strong> (021) 5420 2242</p>
+                    <p><strong>Fax :</strong> (021) 5420 2242</p>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>Ikuti Kami</h2>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                &copy; 2024 ATRIANUR ENERGI INDONESIA. Semua Hak Dilindungi.
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+<script src="../js/javascript.js"></script>
+
+</html>

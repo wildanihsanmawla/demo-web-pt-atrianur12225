@@ -1,0 +1,342 @@
+:root {
+    --card-gap: 1.25rem;
+    --img-height: 200px;
+    --img-height-sm: 160px;
+    --card-min-height: 360px;
+    --card-radius: 12px;
+    --btn-height: 44px;
+    --container-padding: 1rem;
+    --primary-1: #23236a;
+    --primary-2: #4b5bb7;
+}
+
+.product-detail-section {
+    padding: 50px 10%;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.product-gallery {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.product-gallery .main-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail-list img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.thumbnail-list img:hover,
+.thumbnail-list img.active {
+    border-color: #ffcc00;
+}
+
+.product-info {
+    flex: 1 1 400px;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.product-spec ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    margin: 20px 0;
+}
+
+.price-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.price-value {
+    font-size: 1.2rem;
+    color: #008f4c;
+}
+
+.product-action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.product-action-grid a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+}
+
+#currentImage {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* === PRODUK KIMIA LAINNYA === */
+#kimia {
+    padding: 60px 0;
+    background: #fafafa;
+}
+
+#kimia .katalog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#kimia .katalog-header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+#kimia .katalog-header h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* === SLIDER TANPA JAVASCRIPT === */
+.product-katalog-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Scroll horizontal */
+.card-list {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0 20px;
+    margin: 0;
+    scrollbar-width: none;
+    /* Firefox */
+    scroll-snap-type: x mandatory;
+    /* scroll snap aktif */
+    -webkit-overflow-scrolling: touch;
+    /* iOS smooth */
+}
+
+/* Setiap card menempel ke snap point */
+.product-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.25s ease;
+    list-style: none;
+    height: 500px;
+
+    /* tambahkan ini */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Gambar dalam card */
+.productcard-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text isi */
+.product-text {
+    flex-grow: 1;
+    padding: 15px 20px;
+}
+
+.product-text h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.product-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Tombol di bawah card */
+.card-actions {
+    display: grid;
+    place-items: center;
+    padding: 15px;
+}
+
+/* === TOMBOL (dari style kamu sebelumnya) === */
+.card-p-btn {
+    height: var(--btn-height);
+    padding: 0 .9rem;
+    font-size: .98rem;
+    font-weight: 700;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(90deg, var(--primary-1) 60%, var(--primary-2) 100%);
+    box-shadow: 0 6px 14px rgba(36, 51, 120, 0.08);
+    transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.card-p-btn:hover,
+.card-p-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(36, 51, 120, 0.12);
+    background: linear-gradient(90deg, var(--primary-2) 60%, var(--primary-1) 100%);
+    outline: none;
+}
+
+/* --- SCROLLBAR UNTUK DESKTOP --- */
+@media (min-width: 769px) {
+    .card-list {
+        scrollbar-width: thin;
+        /* Firefox */
+        scrollbar-color: #999 #f1f1f1;
+        /* warna scrollbar */
+    }
+
+    .card-list::-webkit-scrollbar {
+        height: 12px;
+        /* tinggi scrollbar horizontal */
+    }
+
+    .card-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* warna track */
+        border-radius: 8px;
+    }
+
+    .card-list::-webkit-scrollbar-thumb {
+        background: #888;
+        /* warna thumb */
+        border-radius: 8px;
+    }
+
+    .card-list::-webkit-scrollbar-thumb:hover {
+        background: #666;
+        /* warna thumb saat hover */
+    }
+}
+
+
+/* Responsif */
+@media (max-width: 992px) {
+    .product-card {
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex: 0 0 80%;
+    }
+
+    .slider-nav {
+        display: none;
+        /* tidak perlu tombol */
+    }
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-gallery,
+    .product-info {
+        flex: 1 1 100%;
+    }
+
+    #currentImage {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .product-action-grid {
+        gap: 40px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail-section {
+        padding: 30px 5%;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    #currentImage {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .product-action-grid {
+        gap: 20px;
+        width: 90%;
+    }
+}

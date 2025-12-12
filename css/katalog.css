@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100dvh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --card-gap: 1.25rem;
+    --img-height: 200px;
+    --img-height-sm: 160px;
+    --card-min-height: 360px;
+    --card-radius: 12px;
+    --btn-height: 44px;
+    --container-padding: 1rem;
+    --primary-1: #23236a;
+    --primary-2: #4b5bb7;
+}
+
+#katalog {
+    padding: 1.1rem 0;
+}
+
+.katalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#katalog h2 {
+    font-size: 2.2rem;
+    color: var(--primary-1);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 300px;
+    gap: var(--card-gap);
+    padding: var(--container-padding);
+    align-items: center;
+    justify-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card,
+.product-katalog-item {
+    width: 100%;
+    background: #e7e7e77c;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(36, 38, 90, 0.06);
+    transition: transform .22s ease, box-shadow .22s ease;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: column;
+    min-height: var(--card-min-height);
+    border: 1px solid rgba(34, 34, 34, 0.04);
+    box-sizing: border-box;
+}
+
+.product-card:hover,
+.product-card:focus-within,
+.product-katalog-item:hover,
+.product-katalog-item:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(36, 38, 90, 0.12);
+}
+
+.productcard-img {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.productcard-img img {
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: var(--img-height);
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.product-text {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    flex: 0 0 auto;
+}
+
+.product-text h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--primary-1);
+    letter-spacing: .2px;
+}
+
+.product-text p {
+    margin: 0;
+    color: black;
+    font-size: .92rem;
+    line-height: 1.3;
+}
+
+.card-actions {
+    padding: 0 1rem 1rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    align-items: center;
+}
+
+.card-p-btn {
+    height: var(--btn-height);
+    padding: 0 .9rem;
+    font-size: .98rem;
+    font-weight: 700;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(90deg, var(--primary-1) 60%, var(--primary-2) 100%);
+    box-shadow: 0 6px 14px rgba(36, 51, 120, 0.08);
+    transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.card-p-btn:hover,
+.card-p-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(36, 51, 120, 0.12);
+    background: linear-gradient(90deg, var(--primary-2) 60%, var(--primary-1) 100%);
+    outline: none;
+}
+
+.about-header {
+    width: 600px;
+    margin-bottom: 2rem;
+}
+
+.partnership {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (min-width: 521px) and (max-width: 900px) {
+    .about-header {
+        width: 500px;
+    }
+}
+
+@media (max-width: 520px) {
+    :root {
+        --img-height: var(--img-height-sm);
+    }
+
+    .katalog-header {
+        padding: 0 0 0 1rem;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+        padding: .75rem;
+    }
+
+    .card-actions {
+        padding: .75rem;
+        justify-content: center;
+    }
+
+    .card-p-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-header {
+        width: 340px;
+    }
+}
